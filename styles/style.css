@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 
 :root {
-    --corPrimaria1:hsl(158, 36%, 37%);
-    --corPrimaria2:hsl(30, 38%, 92%);
-    --corNeutra1:hsl(212, 21%, 14%);
-    --corNeutra2:hsl(228, 12%, 48%);
-    --corNeutra3:hsl(0, 0%, 100%);
+    --corPrimaria1:#3c8067;
+    --corPrimaria2:#f2ebe3;
+    --corNeutra1:#1c232b;
+    --corNeutra2:#6c7289;
+    --corNeutra3:#ffffff;
 
     --fonte-preco: 'Fraunces', serif;
     --fonte-padrao: 'Montserrat', sans-serif;
@@ -18,3 +18,52 @@
     margin: 0px;
     padding: 0px;
 }
+
+body {
+    background-color: var(--corPrimaria2);
+}
+
+/* Main container */
+
+section#icontainer {
+    background-color: var(--corNeutra3);
+    width: 375px;
+    height: 615px;
+    border-radius: 3%;
+    
+}
+
+@media (min-width: 470px) {
+    section#icontainer {
+        width: 605px;
+        height: 450px;
+    }
+}
+
+/* Product Photo */
+
+div#iproduct-photo {
+    text-align: center;
+    padding: 0;
+}
+
+.product-photo {
+    width: 345px;
+    height: 240px;
+    border-radius: 3%;
+}
+
+@media (min-width: 470px) {
+    .product-photo {
+        
+    }
+}
+
+/* Posso tentar, pra não usar JS, adicionar a imagem como bg da div "iproduct-photo" e a partir da media query, alterar o background url para a imagem desktop. */
+
+
+
+button.cart {
+    background: url(/images/icon-cart.svg) no-repeat left center;
+    padding-left:20px;
+  }
