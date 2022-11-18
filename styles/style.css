@@ -23,6 +23,47 @@ body {
     background-color: var(--corPrimaria2);
 }
 
+/* Texts */
+
+h1, h2 {
+    font-family: var(--fonte-padrao);
+    text-align: left;
+    margin-left: 1em;
+}
+
+p {
+    font-family: var(--fonte-padrao);
+    color: var(--corNeutra2);
+    text-align: left;
+    margin-left: 1em;
+}
+
+div#idescription {
+    margin-left: 1em;
+    padding: 1em;
+    width: 295px;
+    
+    text-align: left;
+}
+
+div#iprice {
+    font-family: var(--fonte-preco);
+    color: var(--corPrimaria1);
+    font-size: 2em;
+    width: 295px;
+    padding: .2em;
+    margin-left: 1em;
+}
+
+.del {
+    font-family: var(--fonte-padrao);
+    color: var(--corNeutra2);
+    font-size: .37em;
+    font-weight: bold;
+    margin-left: 1em;
+    
+}
+
 /* Main container */
 
 section#icontainer {
@@ -30,10 +71,12 @@ section#icontainer {
     width: 375px;
     height: 615px;
     border-radius: 3%;
+    margin: 1em auto;
+    
     
 }
 
-@media (min-width: 470px) {
+@media (min-width: 501px) {
     section#icontainer {
         width: 605px;
         height: 450px;
@@ -53,17 +96,33 @@ div#iproduct-photo {
     border-radius: 3%;
 }
 
-@media (min-width: 470px) {
-    .product-photo {
-        
-    }
+/* Cart Button */
+
+div#ibutton {
+    text-align: center;
+
 }
 
-/* Posso tentar, pra não usar JS, adicionar a imagem como bg da div "iproduct-photo" e a partir da media query, alterar o background url para a imagem desktop. */
+.cart {
+    background-color: var(--corPrimaria1);
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    letter-spacing: .5px;
+    color: white;
+    border-radius: .5em;
+    position: relative;
+    padding: 1em;
+    width: 345px;
+    cursor: pointer;
+    border: unset;
+}
 
+.cart::before {
+   content: url(/images/icon-cart.svg);
+   display: inline-block;
+   margin-right: 10px;
+}
 
-
-button.cart {
-    background: url(/images/icon-cart.svg) no-repeat left center;
-    padding-left:20px;
-  }
+.cart:hover {
+    background-color: #1d3f32;
+}

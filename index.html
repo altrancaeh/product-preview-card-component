@@ -6,13 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
   <link rel="stylesheet" href="./styles/style.css">
+
   <title>Frontend Mentor | Product Preview</title>
 
 </head>
 <body>
   <section id="icontainer">
     <div id="iproduct-photo">
-      <img src="./images/image-product-mobile.jpg" class="product-photo" alt="Gabrielle-Essence-Eau-De-Parfum-Photo">
+      
+      <picture>
+        <source media="(min-width: 470px)" srcset="/images/image-product-mobile.jpg">
+        <img src="/images/image-product-desktop.jpg" class="product-photo" alt="Gabrielle-Essence-Eau-De-Parfum-Photo">
+      </picture>
+
+
     </div>
     <div id="idescription">
       <p>
@@ -28,7 +35,7 @@
     </div>
     <div id="iprice">
       $149.99
-      <del>$169.99</del>
+      <del class="del">$169.99</del>
     </div>
     <div id="ibutton">
       <button class="cart">Add to Cart</button>
