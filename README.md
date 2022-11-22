@@ -30,7 +30,7 @@ Thanks for checking out this front-end coding challenge.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Caeh's Product Review Page](https://altrancaeh.github.io/product-preview-card-component/)
 
 ## My process
 
