@@ -29,6 +29,8 @@ h1, h2 {
     font-family: var(--fonte-padrao);
     text-align: left;
     margin-left: 1em;
+    font-size: 2em;
+    font-weight:700;
 }
 
 p {
@@ -38,12 +40,18 @@ p {
     margin-left: 1em;
 }
 
-div#idescription {
+div#ititle {
     margin-left: 1em;
     padding: 1em;
-    width: 295px;
-    
+    width: 250px;
     text-align: left;
+}
+
+@media (min-width:501px) {
+    div#ititle > h1, p {
+        margin-top: .5em;
+        margin: .5em 0 .5em 0;
+    }
 }
 
 div#iprice {
@@ -64,6 +72,7 @@ div#iprice {
     
 }
 
+
 /* Main container */
 
 section#icontainer {
@@ -72,16 +81,18 @@ section#icontainer {
     height: 615px;
     border-radius: 3%;
     margin: 1em auto;
-    
-    
 }
 
 @media (min-width: 501px) {
     section#icontainer {
-        width: 605px;
+        display: flex;
+        width: 600px;
         height: 450px;
     }
 }
+
+/* Product Description */
+
 
 /* Product Photo */
 
@@ -90,17 +101,34 @@ div#iproduct-photo {
     padding: 0;
 }
 
+@media (min-width: 501px) {
+    div#iproduct-photo {
+        width: 300px;
+        height: 450px;
+        text-align: left;
+    }
+}
+
 .product-photo {
+    display: block;
     width: 345px;
     height: 240px;
     border-radius: 3%;
+    object-fit: cover;
+    margin: auto;
+}
+
+@media (min-width: 501px) {
+    .product-photo {
+        width: 300px;
+        height: 450px;       
+    }
 }
 
 /* Cart Button */
 
 div#ibutton {
     text-align: center;
-
 }
 
 .cart {
@@ -115,6 +143,13 @@ div#ibutton {
     width: 345px;
     cursor: pointer;
     border: unset;
+}
+
+@media (min-width:501px) {
+    .cart {
+        width: 235px;
+        margin-right: 3em;
+    }
 }
 
 .cart::before {
